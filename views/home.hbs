@@ -1,0 +1,27 @@
+<h3>Teacher Management System</h3>
+<p><a href="/adduser" class="addbtn">Add Teacher</a></p>
+<table>
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Age</td>
+			<td>Date_Of_Birth</td>
+			<td>Classes_Count</td>
+			<td>Edit</td>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each rows}}
+		<tr>
+			<td>{{this.ID}}</td>
+			<td>{{this.Name}}</td>
+			<td>{{this.Age}}</td>
+			<td>{{this.Date_Of_Birth}}</td>
+			<td>{{this.Classes_Count}}</td>
+			<td><a class = "edit" href="/editteacher/{{this.ID}}">Edit</a></td>	
+		</tr>
+		{{/each}}
+	</tbody>
+
+</table>

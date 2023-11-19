@@ -1,0 +1,35 @@
+<h1>Edit Teacher Details</h1>
+
+{{#if msg}}
+<div class="alert">{{msg}}</div>
+{{/if}}
+
+
+{{#each rows}}
+<form method="post" action="/editteacher/{{this.ID}}" autocomplete="false">
+  <div class="form-group">
+    <label for="ID">ID</label>
+    <input type="text" name="ID" placeholder="ID" value="{{this.ID}}">
+  </div>
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" name="Name" placeholder="Name" value="{{this.Name}}">
+  </div>
+  <div class="form-group">
+    <label for="Age">Age</label>
+    <input type="text" name="Age" placeholder="Age" value="{{this.Age}}">
+  </div>
+  <div class="form-group">
+    <label for="Date_Of_Birth">Date_Of_Birth</label>
+    <input type="text" name="Date_Of_Birth" placeholder="Date_of_Birth" value="{{this.Date_Of_Birth}}">
+  </div>
+  <div class="form-group">
+    <label for="Classes_Count">Classes_Count</label>
+    <input type="text" name="Classes_Count" placeholder="Classes_Count" value="{{this.Classes_Count}}">
+  </div>
+  <div class="form-group">
+    <button type="submit">Save Changes</button>
+    <a href="/">View All Teachers</a>
+  </div>
+</form>
+{{/each}}

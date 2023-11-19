@@ -1,0 +1,33 @@
+<h1>Add New Teacher</h1>
+
+{{#if msg}}
+<div class="alert">{{msg}}</div>
+{{/if}}
+
+<form method="post" action="/adduser" autocomplete="false">
+<div class="form-group">
+	<label for="ID">ID</label>
+	<input type="text" name="ID" placeholder="ID">
+</div>
+<div class="form-group">
+	<label for="Name">Name</label>
+	<input type="text" name="Name" placeholder="Name">
+</div>
+<div class="form-group">
+	<label for="Age">Age</label>
+	<input type="text" name="Age" placeholder="Age">
+</div>
+<div class="form-group">
+	<label for="Date_Of_Birth">Date_Of_Birth</label>
+	<input type="text" name="Date_Of_Birth" placeholder="YYYY-MM-DD">
+</div>
+<div class="form-group">
+	<label for="Classes_Count">Classes_Count</label>
+	<input type="text" name="Classes_Count" placeholder="Classes_Count">
+</div>
+<div class="form-group">
+	<button type = "submit">Save Details</button>
+	<a href="/">View All Teachers</a>
+</div>
+
+</form>
